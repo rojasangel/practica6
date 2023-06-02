@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include "cadenas.h"
+
+int main() {
+    char cadena[100];
+    char caracter;
+    int posicion=1;
+  
+  printf("Introduce una cadena: ");
+    fgets(cadena, 100, stdin);
+    
+    printf("Introduce un caracter: ");
+    scanf("%c", &caracter);
+    
+    posicion = cadenas(cadena,caracter);
+    
+    if (posicion == -1) {
+        printf("El caracter no está en la cadena.\n");
+    } else {
+        printf("El caracter se encuentra en la posición %d de la cadena.\n", posicion+1);
+    }
+    
+    return 0;
+}
